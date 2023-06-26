@@ -80,8 +80,13 @@ const largestPair = function(array) {
 };
 
 const removeParenth = function(str) {
-  let removed = str.replace(')','').replace('(','')
-  return removed;
+  let left = str.split('(')
+  let right = str.split(')')
+
+  let new_arr = [left[0], right[1]]
+  let new_str = new_arr.join('')
+  return new_str;
+
 };
 
 const scoreScrabble = function(str) {
@@ -94,3 +99,4 @@ const scoreScrabble = function(str) {
 
   return total;
 };
+
